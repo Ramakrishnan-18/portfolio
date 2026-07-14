@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import profilePhoto from '../assets/profile.jpeg'
+import resume from '../assets/Resume.pdf'
 
 
 const SUBTITLES = [
@@ -112,7 +113,7 @@ export default function Home() {
             <Link to="/projects" className="btn btn-primary">VIEW PROJECTS</Link>
             <Link to="/experience" className="btn btn-outline">EXPERIENCE</Link>
             <a
-              href="/resume.pdf"
+              href={resume}
               className="btn btn-ghost"
               target="_blank"
               rel="noreferrer"
