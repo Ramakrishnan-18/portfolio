@@ -1,0 +1,226 @@
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Connector ── */
+.exp-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.exp-diamond {
+  width: 12px;
+  height: 12px;
+  background: var(--bg);
+  border: 2px solid var(--neon);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.exp-line {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--neon)55, var(--border));
+  margin-top: 6px;
+}
+
+/* ── Card ── */
+.exp-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.exp-card:hover {
+  border-color: rgba(0,255,157,0.25);
+}
+
+.exp-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-id {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.exp-type-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 2px 8px;
+  border: 1px solid;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+.exp-org {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--neon2);
+}
+
+.exp-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--neon);
+}
+
+.exp-location {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+/* ── Card Body ── */
+.exp-card-body {
+  padding: 1rem 1.5rem 1.25rem;
+}
+
+.exp-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.exp-points li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--dim);
+  line-height: 1.6;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.exp-bullet {
+  font-family: var(--font-mono);
+  color: var(--neon);
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Achievements ── */
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.ach-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ach-card:hover {
+  border-color: rgba(0,255,157,0.25);
+}
+
+.ach-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: var(--neon);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ach-card:hover::before {
+  opacity: 1;
+}
+
+.ach-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ach-title {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.ach-year {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--neon);
+  margin-bottom: 6px;
+}
+
+.ach-body {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--dim);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .exp-card-head { flex-direction: column; }
+  .exp-right { align-items: flex-start; }
+  .ach-grid { grid-template-columns: 1fr; }
+}

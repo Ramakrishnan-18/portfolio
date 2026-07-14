@@ -1,0 +1,273 @@
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.edu-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Connector ── */
+.edu-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.edu-diamond {
+  width: 12px;
+  height: 12px;
+  background: var(--bg);
+  border: 2px solid var(--neon);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.edu-line {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--neon)66, var(--border));
+  margin-top: 6px;
+}
+
+/* ── Card ── */
+.edu-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.edu-card:hover {
+  border-color: rgba(0,255,157,0.3);
+}
+
+.edu-card::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon), var(--neon2), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.edu-card:hover::after {
+  transform: scaleX(1);
+}
+
+.edu-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-id {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+.edu-institute {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--neon2);
+}
+
+.edu-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.edu-status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 3px 8px;
+  border: 1px solid;
+}
+
+.status-ongoing {
+  color: var(--neon);
+  border-color: rgba(0,255,157,0.4);
+}
+
+.status-done {
+  color: var(--muted);
+  border-color: var(--border2);
+}
+
+.edu-gpa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.gpa-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.gpa-val {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--neon);
+}
+
+.edu-period {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+/* ── Card Body ── */
+.edu-card-body {
+  padding: 1rem 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.edu-section-title {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.edu-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.edu-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edu-highlights li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--dim);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.hi-arrow {
+  font-family: var(--font-mono);
+  color: var(--neon2);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Certifications ── */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card:hover {
+  border-color: rgba(0,255,157,0.3);
+}
+
+.cert-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.cert-card:hover::after {
+  transform: scaleX(1);
+}
+
+.cert-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(0,255,157,0.12);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.cert-name {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.cert-org {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--neon2);
+}
+
+.cert-year {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .edu-card-body { grid-template-columns: 1fr; }
+  .edu-card-top  { flex-direction: column; }
+  .edu-meta      { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .certs-grid    { grid-template-columns: 1fr; }
+}
