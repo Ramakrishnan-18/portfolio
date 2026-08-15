@@ -62,7 +62,12 @@
   flex-direction: column;
   gap: 0;
   transition: border-color 0.3s, transform 0.3s;
-  cursor: default;
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 1px solid var(--neon);
+  outline-offset: 2px;
 }
 
 .project-card:hover {

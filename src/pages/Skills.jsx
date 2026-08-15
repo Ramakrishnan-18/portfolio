@@ -17,7 +17,7 @@ const SKILL_GROUPS = [
   {
     cat: 'WEB', label: 'Web & Databases',
     skills: [
-      { name: 'React.js / ', pct: 83 },
+      { name: 'React.js', pct: 83 },
       { name: 'Node.js',      pct: 76 },
       { name: 'SQL',   pct: 74 },
       { name: 'HTML/CSS',        pct: 70 },
@@ -34,7 +34,7 @@ const SKILL_GROUPS = [
 ]
 
 const TOOLS = [
-  'VS Code','Canva','Figma','Postman','Git / GitHub','flutterflow','fIrebase console'
+  'VS Code','Canva','Figma','Postman','Git / GitHub','FlutterFlow','Firebase Console'
 ]
 
 function SkillBar({ name, pct, animate }) {

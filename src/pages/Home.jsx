@@ -53,8 +53,8 @@ function Typewriter({ texts }) {
 
 const STATS = [
   { label: 'GPA',       value: '8.2' },
-  { label: 'Projects',  value: '3' },
-  { label: 'Internships', value: 'null' },
+  { label: 'Projects',  value: '2' },
+  { label: 'Internships', value: '1' },
 ]
 
 const HEAT = [1,0.9,0.7,1,0.5,0.8,0.6,0.4,0.95,0.3,0.7,0.85,0.6,1,0.45,0.75,

@@ -18,7 +18,8 @@ const EDUCATION = [
       'Computer Networks',
     ],
     highlights: [
-    
+      'Maintaining an 8.2 GPA in Computer Science & Engineering',
+      'Active participant in coding hackathons and technical symposiums'
     ],
   },
   {
@@ -37,7 +38,7 @@ const EDUCATION = [
       'Tamil',
     ],
     highlights: [
-     
+      'Secured 83.3% in Higher Secondary Board Examinations'
     ],
   },
   {
@@ -45,7 +46,7 @@ const EDUCATION = [
     degree: 'Secondary School Certificate (X)',
     institute: 'St.Xaviers Higher Secondary School, Tirunelveli',
     period: '2020 — 2021',
-    gpa: 'pass',
+    gpa: 'Pass',
     status: 'COMPLETED',
     courses: [
       'Mathematics',
@@ -54,9 +55,7 @@ const EDUCATION = [
       'English',
       'Tamil',
     ],
-    highlights: [
-   
-    ],
+    highlights: [],
   },
 ]
 
@@ -119,16 +118,18 @@ export default function Education() {
                         ))}
                       </div>
                     </div>
-                    <div className="edu-section">
-                      <div className="edu-section-title">HIGHLIGHTS</div>
-                      <ul className="edu-highlights">
-                        {edu.highlights.map(h => (
-                          <li key={h}>
-                            <span className="hi-arrow">›</span>{h}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {edu.highlights && edu.highlights.length > 0 && (
+                      <div className="edu-section">
+                        <div className="edu-section-title">HIGHLIGHTS</div>
+                        <ul className="edu-highlights">
+                          {edu.highlights.map(h => (
+                            <li key={h}>
+                              <span className="hi-arrow">›</span>{h}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
