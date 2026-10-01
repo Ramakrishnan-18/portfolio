@@ -20,7 +20,7 @@ const ALL_PROJECTS = [
     
   },
    {
-    id: '0x03', icon: '🔒', category: 'Web App',
+    id: '0x03', icon: '🔒', category: 'Web app',
     name: 'Photography Portfolio Platform', status: 'Finished',
     desc: 'A photography portfolio platform that allows photographers to showcase their work and clients to browse and book sessions.',
     tags: ['React', 'Node.js', 'MongoDB','Cloudinary', 'Vercel'],
