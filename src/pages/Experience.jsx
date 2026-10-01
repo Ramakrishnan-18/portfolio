@@ -18,6 +18,21 @@ const EXPERIENCE = [
       'Improved overall user satisfaction by simplifying navigation and layout structure.'
     ],
   },
+  {
+    id: 'EXP_02',
+    type: 'Freelance',
+    role: 'Photographer portfolio Website',
+    location: 'Tirunelveli',
+    period: '25 August 2026 — 1 October 2026',
+    tech: ['React', 'Tailwind CSS','Node js','MongoDB','Cloudinary', 'Vercel'],
+    points: [
+      'Developed a photography website with React, Node.js, Express, and MongoDB Atlas, featuring a visitor gallery and a JWT-protected admin dashboard for bookings and content.',
+      'Configured Cloudinary for direct browser uploads of images and videos up to 150 MB per file, including HEIC support, eliminating the need for server-side media storage.',
+      'Integrated an EmailJS notification flow with the booking form so each enquiry is delivered to the owner by email.',
+      'Resolved production issues across CORS, CSP, and hosting to deliver a stable Vercel release.',
+      'Delivered all five layers in two months, spanning UI, API, database, media storage, and deployment.'
+    ],
+  },
 ]
 
 const TYPE_COLORS = {

@@ -9,7 +9,7 @@ const ALL_PROJECTS = [
     desc: 'FixNGo is a mobile roadside assistance platform connecting users with nearby verified mechanics and emergency vehicles through real-time GPS tracking.',
     tags: ['Flutter', 'Node.js', 'Firebase'],
     links: { github: 'https://github.com/Ramakrishnan-18/FixNgo-' },
-    stars: 430,
+    
   },
   {
     id: '0x02', icon: '🔒', category: 'Mobile App',
@@ -17,7 +17,15 @@ const ALL_PROJECTS = [
     desc: 'AgriConnect is a mobile application that directly connects farmers with consumers and retailers to enable fair pricing, transparent trade, and improved market access without intermediaries.',
     tags: ['Flutter', 'Node.js', 'MongoDB'],
     links: { github: 'https://github.com/Ramakrishnan-18/Agriconnect' },
-    stars: 312,
+    
+  },
+   {
+    id: '0x03', icon: '🔒', category: 'Web App',
+    name: 'Photography Portfolio Platform', status: 'Finished',
+    desc: 'A photography portfolio platform that allows photographers to showcase their work and clients to browse and book sessions.',
+    tags: ['React', 'Node.js', 'MongoDB','Cloudinary', 'Vercel'],
+    links: { github: 'https://github.com/Ramakrishnan-18/all_in_all_azhaguraja-' },
+    
   },
 ]
 
